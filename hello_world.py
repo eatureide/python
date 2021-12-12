@@ -111,3 +111,47 @@
 # for number in numberList:
 #     squares.append(number ** 2)
 # print(squares)
+
+# players = ['charles', 'martina', 'micheal', 'eli']
+# for player in players[:3]:
+#     print(player)
+
+# my_foods = ['pizza', 'falafel', 'carrot cake']
+# friend_foods = my_foods[:]
+
+# my_foods.append('cannoli')
+# friend_foods.append('ice cream')
+
+# print(my_foods)
+# print(friend_foods)
+
+# foods = ['pizza', 'falafel', 'carrot cake', 'ice cream', 'humberger']
+# print(foods[:3])
+
+# print(foods[1:-1])
+
+# print(foods[-3:])
+# originFoods = foods[:]
+# otherFoods = foods[:]
+# originFoods.append('apple')
+# otherFoods.append('peach')
+
+# print(originFoods)
+# print(otherFoods)
+
+# for originFood in originFoods:
+#     print(f'my favorite foods are:{originFood}')
+
+# for otherFood in otherFoods:
+#     print(f'other favorite foods are:{originFood}')
+
+# dismensions = (20, 50)
+# dismensions[0] = 5
+# print(dismensions)
+foods = ('pizza', 'falafel', 'carrot cake', 'ice cream', 'humberger')
+for food in foods:
+    print(food)
+
+foods = ('other')
+
+print(foods)
