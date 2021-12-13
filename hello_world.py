@@ -148,10 +148,74 @@
 # dismensions = (20, 50)
 # dismensions[0] = 5
 # print(dismensions)
-foods = ('pizza', 'falafel', 'carrot cake', 'ice cream', 'humberger')
-for food in foods:
-    print(food)
+# foods = ('pizza', 'falafel', 'carrot cake', 'ice cream', 'humberger')
+# for food in foods:
+#     print(food)
 
-foods = ('other')
+# foods = ('other')
 
-print(foods)
+# print(foods)
+
+# cars = ['audi','bmw','subaru','toyota']
+# for car in cars:
+#     if car == 'bmw':
+#         print(car.upper())
+#     else:
+#         print(car.title())
+
+# age_0 = 22
+# age_1 = 18
+# # # print(age_0 >= 21 and age_1 >= 21)
+# # print(age_0 >= 21 and age_1 <= 21)
+
+# print(age_0 >= 21 or age_1 <= 21)
+
+
+# requested_toppings = ['mushroom', 'onions', 'pineapple']
+# print('onions' in requested_toppings)
+
+# banned_users = ['andrew', 'carolina', 'david']
+# user = 'marie'
+
+# if user not in banned_users:
+#     print(f'{user.title()}, you can submit')
+
+
+# car = 'subaru'
+# print(car == 'subaru')
+# print(car == 'audi')
+
+# age_0 = 1
+# age_1 = 2
+
+# print(age_0 >= 0 or age_1 >= 1)
+# print(age_0 >= 0 and age_1 >= 1)
+
+
+# cars = ['a', 'b', 'c']
+# if 'd' not in cars:
+#     print('d not in cars')
+
+# car = 'test'
+# if car:
+#     print('car')
+
+# age = 12
+
+# if age < 4:
+#     print('free')
+# elif age < 18:
+#     print('cost $25')
+# else:
+#     print('cost $40')
+
+requested_toppings = ['mushrooms', 'extra cheese']
+
+if 'mushrooms' in requested_toppings:
+    print('adding mushrooms')
+if 'pepperoni' in requested_toppings:
+    print('adding pepperoni')
+if 'extra cheese' in requested_toppings:
+    print('adding extra cheese')
+
+print('\n finished  marking your pizza')
