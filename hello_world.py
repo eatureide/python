@@ -209,13 +209,88 @@
 # else:
 #     print('cost $40')
 
-requested_toppings = ['mushrooms', 'extra cheese']
+# requested_toppings = ['mushrooms', 'extra cheese']
 
-if 'mushrooms' in requested_toppings:
-    print('adding mushrooms')
-if 'pepperoni' in requested_toppings:
-    print('adding pepperoni')
-if 'extra cheese' in requested_toppings:
-    print('adding extra cheese')
+# if 'mushrooms' in requested_toppings:
+#     print('adding mushrooms')
+# if 'pepperoni' in requested_toppings:
+#     print('adding pepperoni')
+# if 'extra cheese' in requested_toppings:
+#     print('adding extra cheese')
 
-print('\n finished  marking your pizza')
+# print('\n finished  marking your pizza')
+
+# alien_color = 'yellow'
+# if alien_color == 'green':
+#     print('5 point')
+# elif alien_color == 'red':
+#     print('10 point')
+# else:
+#     print('15 point')
+
+# age = 2
+# if age >= 2 and age <= 4:
+#     print('baby')
+# elif age >= 4 and age <= 13:
+#     print('child')
+# elif age >= 13 and age <= 20:
+#     print('yong')
+# else:
+#     print('old')
+
+
+# requested_toppings = ['a', 'b', 'c']
+
+# if requested_toppings:
+#     for requested_topping in requested_toppings:
+#         print(f'adding {requested_topping}')
+#     print('finish')
+# else:
+#     print('are you want a plain pizza?')
+# available_toppings = ['mushrooms', 'olives',
+#                       'green peppers', 'pepperoni', 'pineapple', 'extra cheese']
+
+# requested_toppings = ['mushrooms', 'french fries', 'extra cheese']
+
+# for requested_topping in requested_toppings:
+#     if requested_topping in available_toppings:
+#         print(f'adding {requested_topping}')
+#     else:
+#         print(f'sorry we don t have {requested_topping}')
+
+# print('finish')
+
+# customer_toppings = ['c', 'f']
+# shop_toppings = ['a', 'b', 'c', 'd', 'e']
+
+# for customer_topping in customer_toppings:
+#     if customer_topping in shop_toppings:
+#         print(f'you can adding {customer_topping}')
+#     else:
+#         print(f'no {customer_topping}')
+
+# current_users = ['john', 'jojo', 'DIO', 'puqi', 'taro']
+# current_users_upper = []
+# for current_user in current_users:
+#     current_users_upper.append(current_user.upper())
+
+# new_users = ['tony', 'allen', 'death', 'dio', 'taro']
+# print(current_users_upper)
+# for new_user in new_users:
+#     if new_user in current_users or new_user.upper() in current_users_upper:
+#         print(f'the name {new_user} used.')
+#     else:
+#         print('you cna use the name')
+
+#  [value ** 2 for value in range(1, 11)]
+numbers = [value for value in range(0, 10)]
+
+for number in numbers:
+    if number == 1:
+        print('1st')
+    elif number == 2:
+        print('2nd')
+    elif number == 3:
+        print('3rd')
+    else:
+        print(f'{number}th')
