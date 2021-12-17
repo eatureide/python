@@ -283,14 +283,114 @@
 #         print('you cna use the name')
 
 #  [value ** 2 for value in range(1, 11)]
-numbers = [value for value in range(0, 10)]
+# numbers = [value for value in range(0, 10)]
 
-for number in numbers:
-    if number == 1:
-        print('1st')
-    elif number == 2:
-        print('2nd')
-    elif number == 3:
-        print('3rd')
-    else:
-        print(f'{number}th')
+# for number in numbers:
+#     if number == 1:
+#         print('1st')
+#     elif number == 2:
+#         print('2nd')
+#     elif number == 3:
+#         print('3rd')
+#     else:
+#         print(f'{number}th')
+
+
+# alien_0 = {
+#     'color': 'green',
+#     'point': 5
+# }
+# # print(alien_0)
+# # alien_0['x_position'] = 0
+# # alien_0['y_position'] = 25
+
+# alien_0['color'] = 'yellow'
+# print(alien_0)
+
+
+# alien_0 = {
+#     'x_position': 0,
+#     'y_position': 25,
+#     'speed': 'medium'
+# }
+
+# print(f"original postion:{alien_0['x_position']}")
+
+# if alien_0['speed'] == 'slow':
+#     x_increment = 1
+# elif alien_0['speed'] == 'medium':
+#     x_increment = 2
+# else:
+#     x_increment = 3
+
+# alien_0['x_position'] = alien_0['x_position'] + x_increment
+
+# print(alien_0)
+
+# alien_0 = {
+#     'color': 'green',
+#     'positions': 5
+# }
+
+# del alien_0['positions']
+# print(alien_0)
+
+# favorite_language = {
+#     'jen': 'python',
+#     'sarah': 'c',
+#     'edward': 'ruby',
+#     'phil': 'python'
+# }
+
+# language = favorite_language['sarah'].title()
+# print(f'sarah favorite language is {language}')
+
+# alien_0 = {
+#     'color': 'red'
+# }
+# print(alien_0.get('points'))
+
+# human = {
+#     'first_name': 'e',
+#     'last_name': 'ature',
+#     'age': 26,
+#     'city': 'guangzhou'
+# }
+# # for h in human:
+# #     print(human[h])
+# # for key, value in human.items():
+# #     print(key)
+# #     print(value)
+
+# print(human.keys())
+
+# fav_languages = {
+#     'phil': 'c',
+#     'sarah': 'javascirpt'
+# }
+# friends = ['phil', 'sarah']
+# for name in fav_languages.keys():
+#     print(f'hi {name.title()}')
+#     if name in friends:
+#         language = fav_languages[name].title()
+#         print(f'\t{name.title()},i see you love {language}')
+
+
+favorite_languages = {'jen': 'python', 'sarah': 'c',
+                      'edward': 'ruby', 'phil': 'python'}
+
+# if 'erin' not in favorite_languages.keys():
+#     print('erin,please take our poll')
+
+# for name in sorted(favorite_languages.keys()):
+#     print(name)
+
+# values = favorite_languages.values()
+# print(set(values))
+
+for human, value in favorite_languages.items():
+    print(f'{human} favorite language:')
+    print(f'{value}\n')
+
+if 'eature' not in favorite_languages.keys():
+    print('hi eatrue please join us pill')
