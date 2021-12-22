@@ -376,8 +376,8 @@
 #         print(f'\t{name.title()},i see you love {language}')
 
 
-favorite_languages = {'jen': 'python', 'sarah': 'c',
-                      'edward': 'ruby', 'phil': 'python'}
+# favorite_languages = {'jen': 'python', 'sarah': 'c',
+#                       'edward': 'ruby', 'phil': 'python'}
 
 # if 'erin' not in favorite_languages.keys():
 #     print('erin,please take our poll')
@@ -388,9 +388,125 @@ favorite_languages = {'jen': 'python', 'sarah': 'c',
 # values = favorite_languages.values()
 # print(set(values))
 
-for human, value in favorite_languages.items():
-    print(f'{human} favorite language:')
-    print(f'{value}\n')
+# for human, value in favorite_languages.items():
+#     print(f'{human} favorite language:')
+#     print(f'{value}\n')
 
-if 'eature' not in favorite_languages.keys():
-    print('hi eatrue please join us pill')
+# if 'eature' not in favorite_languages.keys():
+#     print('hi eatrue please join us pill')
+
+# alien_0 = {'color': 'green', 'point': '5'}
+# alien_1 = {'color': 'yellow', 'point': '10'}
+# alien_2 = {'color': 'red', 'point': '15'}
+
+# aliens = [alien_0, alien_1, alien_2]
+
+# for alien in aliens:
+#     print(alien)
+
+# aliens = []
+
+# for alien_number in range(30):
+#     new_alien = {'color': 'green', 'point': 5, 'speed': 'slow'}
+#     aliens.append(new_alien)
+
+# for alien in aliens[:3]:
+#     if alien['color'] == 'green':
+#         alien['color'] = 'yellow'
+#         alien['speed'] = 'medium'
+#         alien['point'] = 10
+
+# print(aliens[:10])
+
+# pizza = {
+#     'crust': 'thick',
+#     'toppings': ['mushrooms', 'extra cheese']
+# }
+
+# print(f"you ordered a { pizza['crust'] } -curst pizza"
+#     "with you followping toppings")
+
+# for topping in pizza['toppings']:
+#     print(topping)
+
+# favorite_languages = {
+#     'jen': ['python', 'ruby'],
+#     'sarah': ['c'],
+#     'edward': ['ruby', 'go'],
+#     'phil': ['python', 'haskell']
+# }
+
+# for name, languages in favorite_languages.items():
+#     print(f'\n{name.title()} s favorite languages are:')
+#     for language in languages:
+#         print(f'\t{language.title()}')
+
+# for name in favorite_languages:
+#     print(f'\n{name.title()} favorite languages are')
+#     for language in favorite_languages[name]:
+#         print(f'\t{language.title()}')
+
+# users = {
+#     'einstein': {
+#         'first': 'albert',
+#         'last': 'einstein',
+#         'location': 'perinceton'
+#     },
+#     'mcurie': {
+#         'first': 'marie',
+#         'last': 'curie',
+#         'location': 'paris'
+#     }
+# }
+
+# for username, user_info in users.items():
+#     print(f'\nUsername:{username}')
+#     full_name = f"{user_info['first']} {user_info['last']}"
+#     location = user_info['location']
+#     print(f'\tfull name:{full_name}')
+#     print(f'\tlocation :{location}')
+
+# message = input('tell me something, and i will repeat it back to you:')
+# print(message)
+
+# name = input('please enter your name:')
+# print(f'\nHello,{name}!')
+
+# age = input('how old are you?')
+# print(int(age) >= 18)
+
+# height = input('hot tall are you in inches?')
+# height = int(height)
+
+# if height >= 48:
+#     print('you are tall enough to ride')
+# else:
+#     print('you be able to ride')
+
+# current_number = 1
+# while current_number < 5:
+#     print(current_number)
+#     current_number += 1
+
+prompt = 'tell me something and i will repeat it back to you'
+prompt += "\nenter 'quit' to end the program:"
+
+# message = ''
+# while message != 'quit':
+#     message = input(prompt)
+#     if message != 'quit':
+#         print(message)
+
+# while True:
+#     city = input(prompt)
+#     if city == 'quit':
+#         break
+#     else:
+#         print(f'i d love to go to {city.title()}!')
+
+# current_number = 0
+# while current_number < 10:
+#     current_number += 1
+#     if current_number % 2 == 0:
+#         continue
+    
