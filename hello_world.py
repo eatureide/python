@@ -509,4 +509,79 @@ prompt += "\nenter 'quit' to end the program:"
 #     current_number += 1
 #     if current_number % 2 == 0:
 #         continue
+#     print(current_number)
+
+# x = 1
+# while x <= 5:
+#     print(x)
+#     x += 1
+
+# quit = ''
+# while True:
+#     quit = input('input your topping then will be return tour msg:')
+#     if quit == 'quit':
+#         break
+#     print(quit)
+
+
+# age = ''
+# quit = ''
+# while True:
+#     age = int(input('your age:'))
+#     if age < 3:
+#         print('free')
+#     elif age >= 3 and age <= 12:
+#         print('10$')
+#     elif age >= 12:
+#         print('15$')
+#     if quit == 'quit':
+#         break
+
+# unconfirmed_users = ['alice', 'brian', 'candace']
+# confirmed_users = []
+
+# while unconfirmed_users:
+#     current_user = unconfirmed_users.pop()
+
+#     print(f'verifying user:{current_user.title()}')
+#     confirmed_users.append(current_user)
+
+# print(unconfirmed_users)
+# print(confirmed_users)
+
+# pets = ['dog','cat','dog','cat']
+# while 'cat' in pets:
+#     pets.remove('cat')
+
+# print(pets)
+
+# responses = {}
+
+# polling_active = True
+
+# while polling_active:
+#     name = input('\n what is your name?')
+#     response = input('which mountain would you like climb someday?')
+
+#     responses[name] = response
+
+#     repeat = input('other one?')
+#     if repeat == 'no':
+#         polling_active = False
+
+# print(responses)
+
+sandwitch = {}
+start = True
+
+while start:
+    name = input('input sandwitch name:')
+    topping = input('input topping:')
+
+    sandwitch[name] = topping
     
+    repeat = input('other one?')
+    if repeat == 'no':
+        start = False
+
+print(sandwitch)
