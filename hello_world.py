@@ -488,8 +488,8 @@
 #     print(current_number)
 #     current_number += 1
 
-prompt = 'tell me something and i will repeat it back to you'
-prompt += "\nenter 'quit' to end the program:"
+# prompt = 'tell me something and i will repeat it back to you'
+# prompt += "\nenter 'quit' to end the program:"
 
 # message = ''
 # while message != 'quit':
@@ -571,17 +571,82 @@ prompt += "\nenter 'quit' to end the program:"
 
 # print(responses)
 
-sandwitch = {}
-start = True
+# sandwitch = {}
+# start = True
 
-while start:
-    name = input('input sandwitch name:')
-    topping = input('input topping:')
+# while start:
+#     name = input('input sandwitch name:')
+#     topping = input('input topping:')
 
-    sandwitch[name] = topping
-    
-    repeat = input('other one?')
-    if repeat == 'no':
-        start = False
+#     sandwitch[name] = topping
 
-print(sandwitch)
+#     repeat = input('other one?')
+#     if repeat == 'no':
+#         start = False
+
+# print(sandwitch)
+
+# def greet_user(username):
+#     print(username)
+
+# greet_user('hi')
+
+# def describe_pet(animal_type, pet_name = 'dog'):
+#     print(f'i have a {animal_type}')
+#     print(f"my {animal_type}'s name is {pet_name.title()}")
+
+# describe_pet(animal_type='hamster')
+
+
+# def get_formatted_name(first_name, last_name, middle_name=''):
+#     if middle_name:
+#         full_name = f'{first_name} {middle_name} {last_name}'
+#     else:
+#         full_name = f'{first_name} {last_name}'
+
+#     return full_name.title()
+
+
+# print(get_formatted_name(first_name='dio', last_name='brando', middle_name='s'))
+
+
+# def build_person(first_name, last_name):
+#     return {
+#         'first': first_name,
+#         'last': last_name
+#     }
+
+
+# print(build_person('dio', 'brando'))
+
+# def build_person(first_name, last_name, age=None):
+#     person = {
+#         'first': first_name,
+#         'last': last_name
+#     }
+#     if age:
+#         person['age'] = age
+
+#     return person
+
+
+# person = build_person(first_name='jimi', last_name='hendrix', age=27)
+# print(person)
+
+
+def make_album(singer_name, music_name):
+    return {
+        'singer': singer_name,
+        'music': music_name
+    }
+
+
+while True:
+    singer = input('singer name:')
+    if singer == 'q':
+        break
+    music = input('music name:')
+    if music == 'q':
+        break
+
+    print(make_album(singer_name=singer, music_name=music))
