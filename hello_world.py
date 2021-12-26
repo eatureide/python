@@ -634,19 +634,209 @@
 # print(person)
 
 
-def make_album(singer_name, music_name):
-    return {
-        'singer': singer_name,
-        'music': music_name
-    }
+# def make_album(singer_name, music_name):
+#     return {
+#         'singer': singer_name,
+#         'music': music_name
+#     }
 
 
-while True:
-    singer = input('singer name:')
-    if singer == 'q':
-        break
-    music = input('music name:')
-    if music == 'q':
-        break
+# while True:
+#     singer = input('singer name:')
+#     if singer == 'q':
+#         break
+#     music = input('music name:')
+#     if music == 'q':
+#         break
 
-    print(make_album(singer_name=singer, music_name=music))
+#     print(make_album(singer_name=singer, music_name=music))
+
+# name_list = ['dio', 'jojo', 'popo']
+
+# def say_heelo(list):
+#     for item in list:
+#         print(f'hello {item.title()}')
+
+# say_heelo(name_list)
+
+# list_1 = ['dio', 'jojo', 'rabdo', 'johne']
+# list_2 = []
+
+
+# def transfer_list(list, result):
+#     while list:
+#         result.append(list.pop())
+#     return result
+
+
+# print(transfer_list(list_1[:], list_2))
+
+# def make_pizza(size, *toppings):
+#     print(size)
+#     print(toppings)
+
+
+# make_pizza('a', 'b', 'c')
+
+# def build_profile(first, last, **user_info):
+#     user_info['first_name'] = first
+#     user_info['last_name'] = last
+#     return user_info
+
+
+# user_profile = build_profile(
+#     'albert', 'einstein', location='priceton', field='physics')
+# print(user_profile)
+
+# def sanwich(*topping):
+#     print(topping)
+
+
+# sanwich('beaf', 'chicken', 'fish')
+
+# def user_profile(first, last, **user_info):
+#     user_info['first_name'] = first
+#     user_info['last_name'] = last
+#     return user_info
+
+
+# print(user_profile('dio', 'brando', location='usa'))
+# from pizza import make_pizza
+
+
+# from pizza import make_pizza as mp
+# mp('16', 'beaf', 'tomato')
+
+# from pizza import make_pizza
+# make_pizza('16', 'beaf')
+
+# class Dog:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+#     def sit(self):
+#         print(f'{self.name} is now setting')
+
+#     def roll_over(self):
+#         print(f'{self.name} roll over!')
+
+
+# my_dog = Dog('willie', 6)
+# your_dog = Dog('lucy', 3)
+
+# your_dog.sit()
+# my_dog.sit()
+
+
+# class Restaurant:
+#     def __init__(self, restaunt_name, cuisine_type):
+#         self.resetanunt_name = restaunt_name
+#         self.cusine_type = cuisine_type
+
+#     def describe_restanut(self):
+#         print(self.resetanunt_name, self.cusine_type)
+
+#     def besiness_time(self):
+#         print(f'{self.resetanunt_name} opening')
+
+
+# my_resetuant = Restaurant('kfc', 'jumk')
+
+# my_resetuant.describe_restanut()
+# my_resetuant.besiness_time()
+
+# class Car:
+#     def __init__(self, make, model, year):
+#         self.make = make
+#         self.model = model
+#         self.year = year
+#         self.odometer_reading = 0
+
+#     def get_descriptive_name(self):
+#         long_name = f"{self.year} {self.make} {self.model}"
+#         return long_name
+
+#     def read_odometer(self):
+#         print(f'this car has {self.odometer_reading} miles on it')
+
+#     def updaye_odometer(self, mileage):
+#         # if mileage>=self.odometer_reading:
+#         #     self.odometer_reading = mileage
+#         # else:
+#         #     print('you cant roll back an odometer!')
+#         print()
+
+#     def increment_odometer(self, miles):
+#         self.odometer_reading += miles
+
+
+# my_new_car = Car('audi', 'a4', 2019)
+# print(my_new_car.get_descriptive_name())
+# # my_new_car.updaye_odometer(23)
+# # my_new_car.updaye_odometer(20)
+# my_new_car.increment_odometer(23_500)
+# my_new_car.read_odometer()
+
+# class Restuant:
+#     def __init__(self, restuant_name, restuant_type):
+#         self.name = restuant_name
+#         self.type = restuant_type
+#         self.count = 0
+
+#     def restuant_info(self):
+#         print(f'{self.name} {self.type} {self.count}')
+
+#     def set_number_served(self, count):
+#         self.count = count
+
+#     def increment_number_served(self, count):
+#         self.count += count
+
+
+# # my_restuant = Restuant('kfc', 'jumk')
+# # my_restuant.set_number_served(10)
+# # my_restuant.increment_number_served(400)
+# # my_restuant.restuant_info()
+
+
+# class RestuantExtend(Restuant):
+#     def __init__(self, restuant_name, restuant_type):
+#         super().__init__(restuant_name, restuant_type)
+
+
+# check = RestuantExtend('kfc', 'jumk')
+# check.restuant_info()
+
+
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+
+    def get_descriptive_name(self):
+        long_name = f"{self.year} {self.make} {self.model}"
+        return long_name.title()
+
+    def read_odometer(self):
+        print(f'this car has {self.odometer_reading} miles on it')
+
+    def updaye_odometer(self, mileage):
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print('you cant roll back an odometer!')
+
+    def increment_odometer(self, miles):
+        self.odometer_reading += miles
+
+
+class ElectricCar(Car):
+    def __init__(self, make, model, year):
+        super().__init__(make, model, year)
+
+
+my_tesla = ElectricCar('tesla', 'model s', 2019)
+print(my_tesla.get_descriptive_name())
