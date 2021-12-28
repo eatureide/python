@@ -1,0 +1,4 @@
+in python you can
+random number
+import file
+loop program
