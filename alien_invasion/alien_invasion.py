@@ -4,6 +4,7 @@ import pygame
 from settings import Settings
 from ship import Ship
 from bullet import Bullet
+from alien import Alien
 
 
 class AlienInvasion:
@@ -17,6 +18,26 @@ class AlienInvasion:
         pygame.display.set_caption("Alien Invasion")
         self.ship = Ship(self)
         self.bullets = pygame.sprite.Group()
+        self.aliens = pygame.sprite.Group()
+        self._create_fleet()
+
+    def _create_fleet(self):
+        # 创建一个外星人
+        alien = Alien(self)
+        alien_width = alien.rect.width
+        avaliable_space_x = self.settings.screen_with - (2 * alien_width)
+        number_aliens_x = avaliable_space_x // (2 * alien_width)
+
+        for alien_number in range(number_aliens_x):
+            self._create_alien(alien_number)
+
+    def _create_alien(self, alien_number):
+        # 创建一个外星人并将其放在昂前行
+        alien = Alien(self)
+        alien_width = alien.rect.width
+        alien.x = alien_width + 2 * alien_width * alien_number
+        alien.rect.x = alien.x
+        self.aliens.add(alien)
 
     def check_keydown_events(self, event):
         # 响应keydown按键
@@ -60,7 +81,7 @@ class AlienInvasion:
             if bullet.rect.bottom <= 0:
                 self.bullets.remove(bullet)
             bullet.draw_bullet()
-        print(len(self.bullets))
+        # print(len(self.bullets))
         pygame.display.flip()
 
     def _update_screen(self):
@@ -68,6 +89,8 @@ class AlienInvasion:
         self.screen.fill(self.settings.bg_color)
         # 让最近绘制的屏幕可见
         self.ship.blitme()
+
+        self.aliens.draw(self.screen)
 
     def run_game(self):
         while True:
