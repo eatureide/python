@@ -1,9 +1,9 @@
 import sys
 import pygame
-from pygame.constants import KEYDOWN
 
 from settings import Settings
 from ship import Ship
+from bullet import Bullet
 
 
 class AlienInvasion:
@@ -14,8 +14,9 @@ class AlienInvasion:
             (self.settings.screen_with, self.settings.screen_height)
         )
 
-        pygame.display.set_caption('Alien Invasion')
+        pygame.display.set_caption("Alien Invasion")
         self.ship = Ship(self)
+        self.bullets = pygame.sprite.Group()
 
     def check_keydown_events(self, event):
         # 响应keydown按键
@@ -25,6 +26,14 @@ class AlienInvasion:
             self.ship.moving_left = True
         elif event.key == pygame.K_q:
             sys.exit()
+        elif event.key == pygame.K_SPACE:
+            self._fire_bullet()
+
+    def _fire_bullet(self):
+        # 创建一颗子弹，并将其加入编组bullet中
+        if len(self.bullets) < self.settings.bullet_allowed:
+            new_bullet = Bullet(self)
+            self.bullets.add(new_bullet)
 
     def check_keyup_events(self, event):
         # 响应keyup按键
@@ -43,20 +52,31 @@ class AlienInvasion:
             elif event.type == pygame.KEYUP:
                 self.check_keyup_events(event)
 
+    def _update_bullets(self):
+        self.bullets.update()
+
+        # 删除消失的子弹
+        for bullet in self.bullets.copy():
+            if bullet.rect.bottom <= 0:
+                self.bullets.remove(bullet)
+            bullet.draw_bullet()
+        print(len(self.bullets))
+        pygame.display.flip()
+
     def _update_screen(self):
         #  每次循环时都重绘屏幕
         self.screen.fill(self.settings.bg_color)
-        self.ship.blitme()
         # 让最近绘制的屏幕可见
-        pygame.display.flip()
+        self.ship.blitme()
 
     def run_game(self):
         while True:
             self._check_events()
             self.ship.update()
+            self._update_bullets()
             self._update_screen()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     ai = AlienInvasion()
     ai.run_game()
